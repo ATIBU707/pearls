@@ -1,0 +1,44 @@
+[2026-04-22 18:13:01] Failed login attempt for: admin@pearlswisdom.com
+[2026-04-22 18:16:52] New student registered: admin@gmail.com (ID: 2)
+[2026-04-22 18:17:10] User logged in: admin@gmail.com (ID: 2)
+[2026-04-22 18:37:36] User logged out: ID 2
+[2026-04-22 18:37:59] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-04-25 09:00:57] Failed login attempt for: admin@school.edu
+[2026-04-25 09:01:38] User logged in: admin@gmail.com (ID: 2)
+[2026-04-25 09:06:28] User logged out: ID 2
+[2026-04-25 09:06:51] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-04-25 09:07:43] User logged out: ID 1
+[2026-04-25 09:29:38] User logged in: admin@gmail.com (ID: 2)
+[2026-04-25 09:40:18] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-04-25 09:42:58] User logged out: ID 2
+[2026-04-25 09:43:14] User logged in: admin@gmail.com (ID: 2)
+[2026-04-26 08:22:30] User logged in: admin@gmail.com (ID: 2)
+[2026-04-26 08:24:23] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-04-26 08:58:58] User logged in: admin@gmail.com (ID: 2)
+[2026-04-26 09:51:04] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-04-26 12:46:07] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-04-26 12:46:37] User logged in: admin@gmail.com (ID: 2)
+[2026-04-26 14:57:44] User logged in: admin@gmail.com (ID: 2)
+[2026-04-26 17:01:09] User logged in: admin@gmail.com (ID: 2)
+[2026-05-12 09:49:51] Failed login attempt for: wasswaatibu0@gmail.com
+[2026-05-12 09:57:04] User logged in: admin@gmail.com (ID: 2)
+[2026-05-12 10:50:15] PesaPal IPN received: tracking=98f98a48-e0fe-4066-a400-da64d899bbbc type=IPNCHANGE ref=BOOKING-3-1778572157
+[2026-05-12 10:50:18] PesaPal IPN status for 98f98a48-e0fe-4066-a400-da64d899bbbc: FAILED
+[2026-05-12 10:50:18] Payment 27 failed via IPN.
+[2026-05-13 20:08:40] User logged in: admin@gmail.com (ID: 2)
+[2026-05-16 17:30:54] User logged in: admin@gmail.com (ID: 2)
+[2026-05-16 18:08:15] User logged out: ID 2
+[2026-05-16 18:17:43] User logged in: admin@gmail.com (ID: 2)
+[2026-05-16 18:34:55] User logged out: ID 2
+[2026-05-16 18:38:10] User logged in: admin@gmail.com (ID: 2)
+[2026-05-16 18:38:45] User logged out: ID 2
+[2026-05-16 18:40:34] User logged in: admin@gmail.com (ID: 2)
+[2026-05-16 19:02:48] User logged out: ID 2
+[2026-05-16 19:03:48] User logged in: admin@gmail.com (ID: 2)
+[2026-05-16 19:30:12] User logged out: ID 2
+[2026-05-16 19:30:36] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-05-16 19:33:08] User logged in: admin@gmail.com (ID: 2)
+[2026-05-16 20:58:12] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-05-16 21:20:37] EmailService: not configured, skipping email to admin@gmail.com
+[2026-05-16 21:20:37] EmailService: not configured, skipping email to admin@gmail.com
+[2026-05-16 21:20:37] EmailService: not configured, skipping email to admin@gmail.com

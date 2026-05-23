@@ -1,0 +1,76 @@
+[2026-04-25 13:18:01] PesaPal token error: {"error":{"error_type":"api_error","code":"invalid_consumer_key_or_secret_provided","message":""},"status":"500"}
+[2026-04-25 13:18:01] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-25 13:19:22] PesaPal token error: {"error":{"error_type":"api_error","code":"invalid_consumer_key_or_secret_provided","message":""},"status":"500"}
+[2026-04-25 13:19:22] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-25 13:20:21] PesaPal token error: {"error":{"error_type":"api_error","code":"invalid_consumer_key_or_secret_provided","message":""},"status":"500"}
+[2026-04-25 13:20:21] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-25 13:22:08] PesaPal token error: {"error":{"error_type":"api_error","code":"invalid_consumer_key_or_secret_provided","message":""},"status":"500"}
+[2026-04-25 13:22:08] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 08:25:03] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 08:25:03] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 08:25:03] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 08:25:13] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 08:25:13] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 08:25:13] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 08:25:22] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 08:25:22] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 08:25:22] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 08:54:33] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 08:54:33] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 08:54:33] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 08:55:29] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 08:55:29] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 08:55:29] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 08:56:55] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 08:56:55] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 08:56:55] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 08:57:02] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 08:57:02] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 08:57:02] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 08:59:24] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 08:59:24] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 08:59:24] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 09:22:30] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 09:22:30] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 09:22:30] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 09:22:45] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 09:22:45] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 09:22:45] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 09:26:37] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 09:26:37] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 09:26:37] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 09:31:07] PesaPal cURL error 60 on POST /api/Auth/RequestToken
+[2026-04-26 09:31:07] PesaPal token error: {"error":{"message":"Network error"}}
+[2026-04-26 09:31:07] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 09:49:21] PesaPal submit error: {"error":{"error_type":"contractual_error","code":"amount_exceeds_default_limit","message":"Transaction amount exceeds limit.Contact support for assistance"},"status":"500"}
+[2026-04-26 13:20:52] PesaPal submit error: {"error":{"error_type":"test_transactions_exceeded","code":"maximum_amount_limit_exceeded","message":"Request Declined.Maximum allowed test transactions limit exceeded"},"status":"500"}
+[2026-04-26 13:23:58] PesaPal token error: {"error":{"error_type":"api_error","code":"invalid_consumer_key_or_secret_provided","message":""},"status":"500"}
+[2026-04-26 13:23:58] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 13:24:08] PesaPal token error: {"error":{"error_type":"api_error","code":"invalid_consumer_key_or_secret_provided","message":""},"status":"500"}
+[2026-04-26 13:24:08] PesaPal IPN registration error: {"error":{"message":"Auth failed"}}
+[2026-04-26 14:59:01] PesaPal cURL error 28 on POST /api/URLSetup/RegisterIPN
+[2026-04-26 14:59:01] PesaPal IPN registration error: {"error":{"message":"Network error"}}
+[2026-05-16 17:57:50] PesaPal submit error: {"error":{"error_type":"contractual_error","code":"amount_exceeds_default_limit","message":"Transaction amount exceeds limit.Contact support for assistance"},"status":"500"}
+[2026-05-16 22:01:19] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:01:22] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:01:25] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:01:47] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:01:50] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:01:52] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:03:55] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:03:57] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:04:00] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:04:12] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:04:15] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:04:18] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:04:46] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:05:20] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:05:24] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:05:26] EmailService: AUTH failed â€” check MAIL_USERNAME/MAIL_PASSWORD in config.php
+[2026-05-16 22:36:05] EmailService error: SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed SMTP server error: QUIT command failed
+[2026-05-16 22:36:09] EmailService error: SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed SMTP server error: QUIT command failed Detail: Wª‰ tòõ¬þÂDß"AJ™_¾§
+[2026-05-16 22:36:13] EmailService error: SMTP Error: Could not connect to SMTP host. Connection failed. stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
+error:0A000086:SSL routines::certificate verify failed SMTP server error: QUIT command failed Detail:  ‰·Bãêx&ô9~1é
+[2026-05-16 22:36:54] EmailService error: SMTP Error: Could not authenticate.

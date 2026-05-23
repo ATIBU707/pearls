@@ -1,0 +1,18 @@
+[26-Apr-2026 13:18:20 Africa/Kampala] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'wa21' for key 'rooms.room_number' in C:\wamp64\www\online\app\models\Model.php:62
+Stack trace:
+#0 C:\wamp64\www\online\app\models\Model.php(62): mysqli_stmt->execute()
+#1 C:\wamp64\www\online\public\admin\process-room.php(119): Model->insert(Array)
+#2 {main}
+  thrown in C:\wamp64\www\online\app\models\Model.php on line 62
+[26-Apr-2026 13:18:36 Africa/Kampala] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'wa21' for key 'rooms.room_number' in C:\wamp64\www\online\app\models\Model.php:62
+Stack trace:
+#0 C:\wamp64\www\online\app\models\Model.php(62): mysqli_stmt->execute()
+#1 C:\wamp64\www\online\public\admin\process-room.php(119): Model->insert(Array)
+#2 {main}
+  thrown in C:\wamp64\www\online\app\models\Model.php on line 62
+[26-Apr-2026 13:19:00 Africa/Kampala] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'wa21' for key 'rooms.room_number' in C:\wamp64\www\online\app\models\Model.php:62
+Stack trace:
+#0 C:\wamp64\www\online\app\models\Model.php(62): mysqli_stmt->execute()
+#1 C:\wamp64\www\online\public\admin\process-room.php(119): Model->insert(Array)
+#2 {main}
+  thrown in C:\wamp64\www\online\app\models\Model.php on line 62
