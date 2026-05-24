@@ -42,3 +42,13 @@
 [2026-05-16 21:20:37] EmailService: not configured, skipping email to admin@gmail.com
 [2026-05-16 21:20:37] EmailService: not configured, skipping email to admin@gmail.com
 [2026-05-16 21:20:37] EmailService: not configured, skipping email to admin@gmail.com
+[2026-05-24 12:49:06] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-05-24 12:50:17] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-05-24 13:00:15] EmailService: sent 'hello' to wasswaatibu@gmail.com
+[2026-05-24 14:04:38] User logged in: admin@pearlswisdom.com (ID: 1)
+[2026-05-24 14:05:04] User logged out: ID 1
+[2026-05-24 14:05:35] User logged in: wasswaatibu@gmail.com (ID: 2)
+[2026-05-24 14:07:36] PesaPal IPN received: tracking=25b4a56b-bcc5-4cb8-a1d3-da581d90f4e1 type=IPNCHANGE ref=BOOKING-3-1779620796
+[2026-05-24 14:07:38] PesaPal IPN status for 25b4a56b-bcc5-4cb8-a1d3-da581d90f4e1: COMPLETED
+[2026-05-24 14:07:38] Payment 30 completed via IPN. Booking 3 confirmed.
+[2026-05-24 15:04:20] QR check-in: 6F05C79A-C8C2 — Room wa21

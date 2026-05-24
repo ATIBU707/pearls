@@ -14,6 +14,7 @@ require_once '../../config/config.php';
 require_once APP_PATH . '/helpers/functions.php';
 require_once APP_PATH . '/services/PesapalService.php';
 require_once APP_PATH . '/services/NotificationService.php';
+require_once APP_PATH . '/services/EmailService.php';
 require_once APP_PATH . '/models/Payment.php';
 
 // PesaPal sends GET, not POST
@@ -91,6 +92,30 @@ if ($payment && in_array($pesapalStatus, ['COMPLETED', 'PAID', 'SUCCESS'])) {
         );
 
         logMessage("Payment {$payment['payment_id']} completed via IPN. Booking {$payment['booking_id']} confirmed.", 'activity');
+
+        // Send payment confirmation email
+        try {
+            $pRow = getRow(
+                "SELECT p.*, b.booking_code, b.semester, r.room_number, u.email, u.first_name
+                 FROM payments p
+                 JOIN bookings b ON p.booking_id = b.booking_id
+                 JOIN rooms r    ON b.room_id    = r.room_id
+                 JOIN users u    ON b.user_id    = u.user_id
+                 WHERE p.payment_id = ?",
+                [$payment['payment_id']]
+            );
+            if ($pRow) {
+                (new EmailService())->sendPaymentConfirmation(
+                    $pRow['email'], $pRow['first_name'],
+                    $pRow['booking_code'], $pRow['room_number'],
+                    formatCurrency($pRow['amount']),
+                    $confirmCode,
+                    $payment['payment_id']
+                );
+            }
+        } catch (\Throwable $e) {
+            logMessage('IPN email error: ' . $e->getMessage(), 'error');
+        }
     }
 
 } elseif ($payment && in_array($pesapalStatus, ['FAILED', 'INVALID', 'REVERSED'])) {

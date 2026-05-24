@@ -364,7 +364,17 @@ class EmailService
                 : \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = $this->port;
             $mail->CharSet    = 'UTF-8';
-            $mail->Timeout    = 15;
+            $mail->Timeout    = 30;
+
+            // Disable SSL peer verification for local WAMP development
+            // (WAMP PHP lacks the CA bundle needed to verify Gmail's certificate)
+            $mail->SMTPOptions = [
+                'ssl' => [
+                    'verify_peer'       => false,
+                    'verify_peer_name'  => false,
+                    'allow_self_signed' => true,
+                ],
+            ];
 
             $mail->setFrom($this->fromEmail, $this->fromName);
             $mail->addAddress($toEmail, $toName);

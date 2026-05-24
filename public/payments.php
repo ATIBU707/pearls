@@ -105,7 +105,7 @@ include VIEWS_PATH . '/layouts/header.php';
     <!-- Tabs -->
     <ul class="nav nav-pills mb-4 gap-2" id="payTabs">
         <li class="nav-item">
-            <button class="nav-link active px-4" onclick="showTab('pending',this)">
+            <button class="nav-link <?php echo empty($pending_bookings) ? '' : 'active'; ?> px-4" onclick="showTab('pending',this)">
                 <i class="fas fa-clock me-1"></i>Pending
                 <?php if ($pending_bookings): ?>
                 <span class="badge bg-warning text-dark ms-1"><?php echo count($pending_bookings); ?></span>
@@ -113,14 +113,18 @@ include VIEWS_PATH . '/layouts/header.php';
             </button>
         </li>
         <li class="nav-item">
-            <button class="nav-link px-4" onclick="showTab('history',this)">
+            <button class="nav-link <?php echo empty($pending_bookings) ? 'active' : ''; ?> px-4" onclick="showTab('history',this)">
                 <i class="fas fa-history me-1"></i>Payment History
+                <?php $completedCount = count(array_filter($payments, fn($p) => $p['status'] === 'completed')); ?>
+                <?php if ($completedCount > 0): ?>
+                <span class="badge bg-success ms-1"><?php echo $completedCount; ?></span>
+                <?php endif; ?>
             </button>
         </li>
     </ul>
 
     <!-- ── PENDING TAB ── -->
-    <div id="tab-pending">
+    <div id="tab-pending" <?php echo empty($pending_bookings) ? 'style="display:none;"' : ''; ?>>
         <?php if (empty($pending_bookings)): ?>
         <div class="card border-0 shadow-sm rounded-4 text-center py-5">
             <div class="card-body">
@@ -184,6 +188,24 @@ include VIEWS_PATH . '/layouts/header.php';
                            class="btn btn-warning w-100 rounded-pill fw-bold" style="color:#1e1b4b;">
                             <i class="fas fa-credit-card me-2"></i>Pay Now
                         </a>
+                        <?php
+                        // Show receipt links for any completed partial payments on this booking
+                        $partialPayments = getRows(
+                            "SELECT payment_id FROM payments WHERE booking_id = ? AND status = 'completed' ORDER BY created_at DESC",
+                            [$pb['booking_id']]
+                        );
+                        if (!empty($partialPayments)):
+                        ?>
+                        <div class="mt-2 d-flex flex-wrap gap-1">
+                            <?php foreach ($partialPayments as $i => $pp): ?>
+                            <a href="payment/receipt.php?id=<?php echo $pp['payment_id']; ?>"
+                               class="btn btn-sm rounded-pill w-100"
+                               style="background:#eef2ff;color:#4f46e5;border:1px solid #c7d2fe;font-size:0.78rem;font-weight:600;">
+                                <i class="fas fa-file-invoice me-1"></i>Receipt <?php echo count($partialPayments) > 1 ? '#'.($i+1) : ''; ?>
+                            </a>
+                            <?php endforeach; ?>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -193,7 +215,7 @@ include VIEWS_PATH . '/layouts/header.php';
     </div>
 
     <!-- ── HISTORY TAB ── -->
-    <div id="tab-history" style="display:none;">
+    <div id="tab-history" <?php echo empty($pending_bookings) ? '' : 'style="display:none;"'; ?>>
         <?php if (empty($payments)): ?>
         <div class="card border-0 shadow-sm rounded-4 text-center py-5">
             <div class="card-body">

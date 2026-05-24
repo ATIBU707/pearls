@@ -30,9 +30,13 @@ if (isset($_GET['poll'])) {
     $payRec = getRow("SELECT * FROM payments WHERE payment_id = ?", [$payment_id]);
     if (!$payRec) { echo json_encode(['status' => 'error', 'message' => 'Payment not found']); exit; }
 
-    // Already completed in DB
+    // ── Always check DB first — IPN may have already updated it ──────────
     if ($payRec['status'] === 'completed') {
         echo json_encode(['status' => 'completed', 'payment_id' => $payment_id]);
+        exit;
+    }
+    if ($payRec['status'] === 'failed') {
+        echo json_encode(['status' => 'failed', 'message' => 'Payment was declined or failed.']);
         exit;
     }
 
@@ -247,6 +251,11 @@ include BASE_PATH . '/views/layouts/header.php';
                    Cancel
                 </a>
             </div>
+            <div style="margin-top:16px;">
+                <a href="../payments.php" style="font-size:0.75rem;color:#475569;text-decoration:none;">
+                    Already paid? <span style="color:#818cf8;">Go to My Payments</span>
+                </a>
+            </div>
         </div>
 
         <!-- Success view (hidden) -->
@@ -255,7 +264,17 @@ include BASE_PATH . '/views/layouts/header.php';
                 <i class="fas fa-check-double" style="color:#4ade80;font-size:1.8rem;"></i>
             </div>
             <h2 style="font-weight:900;color:#4ade80;margin-bottom:8px;">Payment Successful!</h2>
-            <p style="color:#94a3b8;margin-bottom:24px;">Your booking has been confirmed. Redirecting…</p>
+            <p style="color:#94a3b8;margin-bottom:28px;">Your booking has been confirmed.</p>
+            <div style="display:flex;flex-direction:column;gap:12px;align-items:center;">
+                <a id="receiptBtn" href="receipt.php"
+                   style="display:inline-flex;align-items:center;gap:10px;padding:14px 36px;border-radius:999px;background:linear-gradient(135deg,#16a34a,#15803d);color:white;font-weight:800;text-decoration:none;font-size:0.95rem;box-shadow:0 4px 16px rgba(22,163,74,0.35);">
+                    <i class="fas fa-file-invoice"></i> View & Download Receipt
+                </a>
+                <a href="../payments.php"
+                   style="font-size:0.82rem;color:#94a3b8;text-decoration:none;">
+                    Go to My Payments
+                </a>
+            </div>
         </div>
 
         <!-- Failed view (hidden) -->
@@ -301,7 +320,8 @@ function checkNow() {
 
 function poll() {
     checks++;
-    document.getElementById('checkCount').textContent = checks + ' check' + (checks !== 1 ? 's' : '') + ' done';
+    var countEl = document.getElementById('checkCount');
+    if (countEl) countEl.textContent = checks + ' check' + (checks !== 1 ? 's' : '') + ' done';
 
     var url = 'status.php?poll=1&payment_id=' + paymentId + '&tracking_id=' + encodeURIComponent(trackingId);
     fetch(url)
@@ -312,7 +332,7 @@ function poll() {
             } else if (data.status === 'failed') {
                 showFailed(data.message || 'Payment was declined.');
             } else if (checks >= maxChecks) {
-                showFailed('Payment timed out. Please try again or contact support.');
+                showFailed('Payment timed out. Please check My Payments page or contact support.');
             } else {
                 startCountdown();
             }
@@ -332,11 +352,11 @@ function startCountdown() {
 }
 
 function showSuccess(pid) {
+    var receiptId = pid || paymentId;
+    clearInterval(timer);
     document.getElementById('pendingView').style.display = 'none';
     document.getElementById('successView').style.display = 'block';
-    setTimeout(function() {
-        window.location = 'receipt.php?id=' + (pid || paymentId);
-    }, 2000);
+    document.getElementById('receiptBtn').href = 'receipt.php?id=' + receiptId;
 }
 
 function showFailed(msg) {

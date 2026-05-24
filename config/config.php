@@ -90,7 +90,7 @@ define('PAYMENT_CALLBACK_URL', PESAPAL_REDIRECT_URL);
 define('MAIL_HOST', 'smtp.gmail.com');
 define('MAIL_PORT', 587);
 define('MAIL_USERNAME', 'wasswaatibu0@gmail.com');
-define('MAIL_PASSWORD', 'nzlkzettktihovp');
+define('MAIL_PASSWORD', 'yeoytyamljuerjas');
 define('MAIL_FROM', 'wasswaatibu0@gmail.com');
 define('MAIL_FROM_NAME', APP_NAME);
 define('MAIL_ENCRYPTION', 'tls');

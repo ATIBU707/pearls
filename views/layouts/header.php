@@ -161,6 +161,12 @@ if ($isLogin) {
             <span>Email Reminders</span>
         </a>
 
+        <a href="<?php echo APP_URL; ?>admin/checkin.php"
+           class="sidebar-link<?php echo sidebarActive('checkin.php', $current, 'admin'); ?>">
+            <i class="fas fa-qrcode sidebar-link-icon"></i>
+            <span>QR Check-In</span>
+        </a>
+
         <?php else: ?>
         <!-- ── Student Navigation ── -->
         <p class="sidebar-section-label">Menu</p>
